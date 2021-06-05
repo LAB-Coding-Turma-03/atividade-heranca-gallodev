@@ -1,46 +1,43 @@
 package br.com.impacta.lab;
 
-public class Conta {
+public class Conta{
+    private String tipo;
+    private int numero;
+    private int agencia;
+    
+    public Conta(String tipo, int numero, int agencia){
+        setTipo(tipo);
+        setNumero(numero);
+        setAgencia(agencia);
+    }
 
-	private int numero;
-	private int agencia;
-	private String tipo;
+    public String montarResumoDaConta(){
+        return "Numero: " + this.getNumero() + 
+        " - Agencia: " + this.getAgencia() +
+        " - Tipo: " + this.getTipo();
+    }
 
-	public Conta(int numero, int agencia, String tipo) {
-		super();
-		this.numero = numero;
-		this.agencia = agencia;
-		this.tipo = tipo;
-	}
+    public String getTipo() {
+        return tipo;
+    };
 
-	public int getNumero() {
-		return numero;
-	}
+    public int getAgencia() {
+        return agencia;
+    }
 
-	public void setNumero(int numero) {
-		this.numero = numero;
-	}
+    public int getNumero() {
+        return numero;
+    }
 
-	public int getAgencia() {
-		return agencia;
-	}
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
 
-	public void setAgencia(int agencia) {
-		this.agencia = agencia;
-	}
+    public void setAgencia(int agencia) {
+        this.agencia = agencia;
+    }
 
-	public String getTipo() {
-		return tipo;
-	}
-
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
-	}
-
-	public String montarResumoDaConta() {
-		return "Numero: " + this.getNumero() + 
-		" - Agencia: " + this.getAgencia() +
-		" - Tipo: " + this.getTipo();
-	}
-	
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
 }
